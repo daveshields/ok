@@ -1,0 +1,277 @@
+gcc  -D m64 -m64 -static  -c  -obreak.o ./osint/break.c
+gcc  -D m64 -m64 -static  -c  -ocheckfpu.o ./osint/checkfpu.c
+gcc  -D m64 -m64 -static  -c  -ocompress.o ./osint/compress.c
+./osint/compress.c: In function ‘decode_string’:
+./osint/compress.c:211:13: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+             exit(1);
+             ^~~~
+./osint/compress.c:211:13: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/compress.c:211:13: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -ocpys2sc.o ./osint/cpys2sc.c
+gcc  -D m64 -m64 -static  -c  -odoset.o ./osint/doset.c
+gcc  -D m64 -m64 -static  -c  -odosys.o ./osint/dosys.c
+./osint/dosys.c: In function ‘dosys’:
+./osint/dosys.c:25:12: warning: implicit declaration of function ‘system’; did you mean ‘zystm’? [-Wimplicit-function-declaration]
+     return system( cmd );
+            ^~~~~~
+            zystm
+gcc  -D m64 -m64 -static  -c  -ofloat.o ./osint/float.c
+gcc  -D m64 -m64 -static  -c  -oflush.o ./osint/flush.c
+gcc  -D m64 -m64 -static  -c  -ogethost.o ./osint/gethost.c
+gcc  -D m64 -m64 -static  -c  -ogetshell.o ./osint/getshell.c
+gcc  -D m64 -m64 -static  -c  -olenfnm.o ./osint/lenfnm.c
+gcc  -D m64 -m64 -static  -c  -omath.o ./osint/math.c
+gcc  -D m64 -m64 -static  -c  -ooptfile.o ./osint/optfile.c
+gcc  -D m64 -m64 -static  -c  -oosclose.o ./osint/osclose.c
+./osint/osclose.c: In function ‘osclose’:
+./osint/osclose.c:67:13: warning: implicit declaration of function ‘kill’ [-Wimplicit-function-declaration]
+             kill( ioptr->pid );
+             ^~~~
+gcc  -D m64 -m64 -static  -c  -oosopen.o ./osint/osopen.c
+gcc  -D m64 -m64 -static  -c  -oospipe.o ./osint/ospipe.c
+./osint/ospipe.c: In function ‘ospipe’:
+./osint/ospipe.c:95:9: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+         exit(1);   // Should never get here!
+         ^~~~
+./osint/ospipe.c:95:9: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/ospipe.c:95:9: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -oosread.o ./osint/osread.c
+gcc  -D m64 -m64 -static  -c  -ooswait.o ./osint/oswait.c
+./osint/oswait.c: In function ‘oswait’:
+./osint/oswait.c:38:24: warning: implicit declaration of function ‘wait’; did you mean ‘write’? [-Wimplicit-function-declaration]
+     while ( (deadpid = wait( &status )) != pid  &&  deadpid != -1 )
+                        ^~~~
+                        write
+gcc  -D m64 -m64 -static  -c  -ooswrite.o ./osint/oswrite.c
+gcc  -D m64 -m64 -static  -c  -oprompt.o ./osint/prompt.c
+./osint/prompt.c: In function ‘prompt’:
+./osint/prompt.c:56:5: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+     exit(0);
+     ^~~~
+./osint/prompt.c:56:5: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/prompt.c:56:5: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -ordenv.o ./osint/rdenv.c
+./osint/rdenv.c:43:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ rdenv( varname, result )
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -ost2d.o ./osint/st2d.c
+gcc  -D m64 -m64 -static  -c  -ostubs.o ./osint/stubs.c
+./osint/stubs.c:13:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysdm()
+ ^~~~~
+./osint/stubs.c:19:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zystt()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -oswcinp.o ./osint/swcinp.c
+./osint/swcinp.c: In function ‘swcinp’:
+./osint/swcinp.c:212:17: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+                 exit(1);
+                 ^~~~
+./osint/swcinp.c:212:17: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/swcinp.c:212:17: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+./osint/swcinp.c:226:13: warning: incompatible implicit declaration of built-in function ‘exit’
+             exit(1);
+             ^~~~
+./osint/swcinp.c:226:13: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -oswcoup.o ./osint/swcoup.c
+gcc  -D m64 -m64 -static  -c  -osyslinux.o ./osint/syslinux.c
+gcc  -D m64 -m64 -static  -c  -otestty.o ./osint/testty.c
+gcc  -D m64 -m64 -static  -c  -otrypath.o ./osint/trypath.c
+gcc  -D m64 -m64 -static  -c  -owrtaout.o ./osint/wrtaout.c
+./osint/wrtaout.c: In function ‘openaout’:
+./osint/wrtaout.c:38:23: warning: implicit declaration of function ‘clock’; did you mean ‘lockf’? [-Wimplicit-function-declaration]
+     n = (unsigned int)clock();
+                       ^~~~~
+                       lockf
+./osint/wrtaout.c: In function ‘closeaout’:
+./osint/wrtaout.c:144:13: warning: implicit declaration of function ‘rename’; did you mean ‘renames’? [-Wimplicit-function-declaration]
+         if (rename(tmpfnbuf, fn) != 0)
+             ^~~~~~
+             renames
+gcc  -D m64 -m64 -static  -c  -ozz.o ./osint/zz.c
+gcc  -D m64 -m64 -static  -c  -osysax.o ./osint/sysax.c
+./osint/sysax.c:22:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysax()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysbs.o ./osint/sysbs.c
+gcc  -D m64 -m64 -static  -c  -osysbx.o ./osint/sysbx.c
+gcc  -D m64 -m64 -static  -c  -osyscm.o ./osint/syscm.c
+gcc  -D m64 -m64 -static  -c  -osysdc.o ./osint/sysdc.c
+./osint/sysdc.c: In function ‘zysdc’:
+./osint/sysdc.c:40:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+./osint/sysdc.c:37:5: note: declared here
+ int zysdc()
+     ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysdt.o ./osint/sysdt.c
+./osint/sysdt.c:39:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysdt()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysea.o ./osint/sysea.c
+gcc  -D m64 -m64 -static  -c  -osysef.o ./osint/sysef.c
+gcc  -D m64 -m64 -static  -c  -osysej.o ./osint/sysej.c
+./osint/sysej.c: In function ‘zysej’:
+./osint/sysej.c:69:5: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+     exit( WB(int) );
+     ^~~~
+./osint/sysej.c:69:5: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/sysej.c:69:5: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -osysem.o ./osint/sysem.c
+gcc  -D m64 -m64 -static  -c  -osysen.o ./osint/sysen.c
+gcc  -D m64 -m64 -static  -c  -osysep.o ./osint/sysep.c
+gcc  -D m64 -m64 -static  -c  -osysex.o ./osint/sysex.c
+gcc  -D m64 -m64 -static  -c  -osysfc.o ./osint/sysfc.c
+gcc  -D m64 -m64 -static  -c  -osysgc.o ./osint/sysgc.c
+gcc  -D m64 -m64 -static  -c  -osyshs.o ./osint/syshs.c
+gcc  -D m64 -m64 -static  -c  -osysid.o ./osint/sysid.c
+gcc  -D m64 -m64 -static  -c  -osysif.o ./osint/sysif.c
+gcc  -D m64 -m64 -static  -c  -osysil.o ./osint/sysil.c
+./osint/sysil.c:20:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysil()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysin.o ./osint/sysin.c
+./osint/sysin.c:30:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysin()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysio.o ./osint/sysio.c
+./osint/sysio.c:31:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysio()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysld.o ./osint/sysld.c
+gcc  -D m64 -m64 -static  -c  -osysmm.o ./osint/sysmm.c
+./osint/sysmm.c: In function ‘moremem’:
+./osint/sysmm.c:68:21: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+                     exit(1);
+                     ^~~~
+./osint/sysmm.c:68:21: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/sysmm.c:68:21: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -osysmx.o ./osint/sysmx.c
+gcc  -D m64 -m64 -static  -c  -osysou.o ./osint/sysou.c
+gcc  -D m64 -m64 -static  -c  -osyspl.o ./osint/syspl.c
+./osint/syspl.c:33:9: warning: type defaults to ‘int’ in declaration of ‘rearmbrk’ [-Wimplicit-int]
+ extern  rearmbrk (void);
+         ^~~~~~~~
+gcc  -D m64 -m64 -static  -c  -osyspp.o ./osint/syspp.c
+gcc  -D m64 -m64 -static  -c  -osysrw.o ./osint/sysrw.c
+gcc  -D m64 -m64 -static  -c  -osysst.o ./osint/sysst.c
+gcc  -D m64 -m64 -static  -c  -osysstdio.o ./osint/sysstdio.c
+./osint/sysstdio.c:83:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysrd()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osystm.o ./osint/systm.c
+gcc  -D m64 -m64 -static  -c  -osystty.o ./osint/systty.c
+./osint/systty.c:42:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zyspi()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysul.o ./osint/sysul.c
+gcc  -D m64 -m64 -static  -c  -osysxi.o ./osint/sysxi.c
+./bin/sbl -x -u 64 lex.sbl
+     29346  lines read
+     12035  statements processed
+     12097  target code lines produced
+   1048043  spitbol statements executed
+         0  errors detected
+    140215  free bytes
+
+
+
+normal end
+in file              lex.sbl
+in line              1005
+in statement         704
+stmts executed       1048057
+execution time msec  98
+stmt / microsec      10
+stmt / millisec      10694
+stmt / second        10694000
+in line              117
+memory used (bytes)  299296
+memory left (bytes)  224984
+
+./bin/sbl -x -u 64 asm.sbl
+  input lex file                          : s.lex
+  output asm file                         : s.s
+  max.err 330
+     20535  lines read
+     12097  statements processed
+     15820  target code lines produced
+   1517447  spitbol statements executed
+       330  maximum err/erb number
+        19  prc count
+         0  errors detected
+     39043  free words
+
+
+
+normal end
+in file              asm.sbl
+in line              2270
+in statement         1859
+stmts executed       1517467
+execution time msec  119
+stmt / microsec      12
+stmt / millisec      12751
+stmt / second        12751000
+in line              108
+memory used (bytes)  211280
+memory left (bytes)  313000
+
+nasm -f elf64 -d m64 -l s.lst -os.o s.s
+gcc  -D m64 -m64 -static  -c  -ogetargs.o ./osint/getargs.c
+./osint/getargs.c: In function ‘getargs’:
+./osint/getargs.c:312:21: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+                     exit(1);
+                     ^~~~
+./osint/getargs.c:312:21: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/getargs.c:312:21: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+./osint/getargs.c:328:17: warning: incompatible implicit declaration of built-in function ‘exit’
+                 exit(1);   // V1.08
+                 ^~~~
+./osint/getargs.c:328:17: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -omain.o ./osint/main.c
+./osint/main.c:41:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main( argc, argv )
+ ^~~~
+./osint/main.c: In function ‘main’:
+./osint/main.c:133:9: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+         exit(1);
+         ^~~~
+./osint/main.c:133:9: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/main.c:133:9: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+./osint/main.c:148:9: warning: incompatible implicit declaration of built-in function ‘exit’
+         exit( 1 );
+         ^~~~
+./osint/main.c:148:9: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+./osint/main.c:156:9: warning: incompatible implicit declaration of built-in function ‘exit’
+         exit( 1 );
+         ^~~~
+./osint/main.c:156:9: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+./osint/main.c:165:9: warning: incompatible implicit declaration of built-in function ‘exit’
+         exit( 1 );
+         ^~~~
+./osint/main.c:165:9: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+nasm -f elf64 -d m64 -l x64.lst -ox64.o x64.s
+./bin/sbl -x -1=s.err -2=err.s err.sbl
+input message length = 13193
+output string size = 4135
+savings = 9058
+spitbol statements executed 707788
+
+
+
+normal end
+in file              err.sbl
+in line              473
+in statement         303
+stmts executed       707790
+execution time msec  394
+stmt / microsec      1
+stmt / millisec      1796
+stmt / second        1796000
+in line              171
+memory used (bytes)  197904
+memory left (bytes)  326376
+
+nasm -f elf64 -d m64 -l err.lst -oerr.o err.s
+gcc -D m64 -m64 -static    break.o checkfpu.o compress.o cpys2sc.o doset.o dosys.o float.o flush.o gethost.o getshell.o lenfnm.o math.o optfile.o osclose.o osopen.o ospipe.o osread.o oswait.o oswrite.o prompt.o rdenv.o st2d.o stubs.o swcinp.o swcoup.o syslinux.o testty.o trypath.o wrtaout.o zz.o   sysax.o sysbs.o sysbx.o syscm.o sysdc.o sysdt.o sysea.o sysef.o sysej.o sysem.o sysen.o sysep.o sysex.o sysfc.o sysgc.o syshs.o sysid.o sysif.o sysil.o sysin.o sysio.o sysld.o sysmm.o sysmx.o sysou.o syspl.o syspp.o sysrw.o sysst.o sysstdio.o systm.o systty.o sysul.o sysxi.o  s.o getargs.o main.o x64.o err.o -osbl -lm
